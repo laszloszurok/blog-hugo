@@ -46,6 +46,28 @@ virt-install --osinfo list
 
 ## Create a VM with virt-install
 
+### 3D acceleration
+
+For 3D acceleration pass these options to virt-install:
+
+* --graphics spice,listen=none,gl.enable=yes
+* --video virtio,accel3d=yes
+
+Alternatively 3D acceleration can be enabled in the domain xml with these settings:
+
+```xml
+<graphics type='spice'>
+  <listen type='none'/>
+  <gl enable='yes'/>
+</graphics>
+
+<video>
+  <model type='virtio' heads='1' vram='65536'>
+    <acceleration accel3d='yes'/>
+  </model>
+</video>
+```
+
 ### From an iso file
 
 ```terminal
