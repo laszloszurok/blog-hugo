@@ -50,8 +50,8 @@ virt-install --osinfo list
 
 For 3D acceleration pass these options to virt-install:
 
-* --graphics spice,listen=none,gl.enable=yes
-* --video virtio,accel3d=yes
+* `--graphics spice,listen=none,gl.enable=yes`
+* `--video virtio,accel3d=yes`
 
 Alternatively 3D acceleration can be enabled in the domain xml with these settings:
 
